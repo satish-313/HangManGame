@@ -8,7 +8,7 @@ const Life = ({ life }) => {
   return (
     <div className="life">
       {l.map((li,index) => {
-        return <div key={index} > <FaHeart/> </div>
+        return <div key={index} > <i><FaHeart/></i> </div>
       })}
     </div>
   )

@@ -117,13 +117,12 @@ const App = () => {
   }
 
   return (
-    <div>
-      {won ? <div> You won</div> : <div>
+    <div className="section">
+      {won ? <div><h1 className="won">You won!</h1> </div> : <div className="game-container">
         {!completed.status && <div>
-          <h1>{word[value]}</h1>
           <Life life={completed.life} />
-          <TypedLetter typed={typed} />
-          <h2>{dashline}</h2>
+          <h2 className="dashline">{dashline}</h2>
+          <h4 className="typed">Typed Letter : <TypedLetter typed={typed} /> </h4>
           <form onSubmit={handleSubmit}>
             <label >Enter A Letter :</label>
             <input type="text" placeholder="Enter a Letter" value={letter} onChange={(e) => inputValidation(e)} />
@@ -133,11 +132,12 @@ const App = () => {
         </div>
         }
         {completed.status && <div>
-          <h1>{completed.msg}</h1>
+          <h1 className="word">{word[value]}!!</h1>
+          <h1 className="finish">{completed.msg}!</h1>
         </div>
         }
       </div>}
-      <button onClick={() => newWords()} >try new word</button>
+      <button className="next-word" onClick={() => newWords()} >try new word</button>
     </div>
   )
 }

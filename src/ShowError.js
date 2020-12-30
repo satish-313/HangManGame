@@ -12,7 +12,7 @@ const ShowError = ({error,setError}) => {
 
   return(
     <div>
-      <h1>{msg}</h1>
+      <p className="msg">{msg}</p>
     </div>
   )
 }

@@ -5,7 +5,7 @@ const TypedLetter = ({typed}) => {
   const temp = arr.join(" ")
 
   return(
-    <div>{temp}</div>
+    <i>{temp}</i>
   )
 }
 
